@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Big Shoulders Display', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --transparent-white /* (paragraphs) */: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray /* (background, headings, buttons) */: hsl(0, 0%, 95%);
+
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+@layer components {
+    ul {
+        @apply sm:grid grid-cols-3 sm:w-screen sm:h-screen items-center justify-center sm:px-16 p-[5%]
+    }
+
+    li {
+        @apply relative sm:h-[70vh] h-[60vh] md:p-10 sm:p-8 p-10
+    }
+
+    h1 {
+        @apply my-8 text-4xl text-[--very-light-gray] font-bold font-["Big_Shoulders_Display"]
+    }
+
+    p {
+        @apply text-[--transparent-white] text-base sm:text-sm md:text-base
+    }
+    
+    button {
+        @apply absolute bottom-0 hover:bg-transparent hover:text-[--transparent-white] border border-transparent hover:border-white md:mb-8 sm:mb-6 mb-8 bg-[--very-light-gray] md:py-2 sm:py-1 py-2 px-4 rounded-full transition-all duration-300
+    }
+}
